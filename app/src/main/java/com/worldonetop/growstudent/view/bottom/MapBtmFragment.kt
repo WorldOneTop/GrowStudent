@@ -1,4 +1,4 @@
-package com.worldonetop.growstudent.view
+package com.worldonetop.growstudent.view.bottom
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -21,6 +21,9 @@ class MapBtmFragment : Fragment() {
     ): View {
 
         _binding = FragmentMapBtmBinding.inflate(layoutInflater,container, false)
+
+
+
         return binding.root
     }
 }
