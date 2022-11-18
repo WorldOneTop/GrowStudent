@@ -41,8 +41,8 @@ android {
 dependencies {
     def viewModelVersion = "2.5.1"
     def hiltVersion = "2.38.1"
-    def roomVersion = "2.4.3"
     def coroutine = "2.5.1"
+    def retrofitVersion = "2.9.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -65,7 +65,8 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
 
-    implementation "androidx.room:room-ktx:$roomVersion"
-    implementation "androidx.room:room-runtime:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
+
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 }
