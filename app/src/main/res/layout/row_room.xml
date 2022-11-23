@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="18dp">
+
+        <TextView
+            android:id="@+id/title"
+            tools:text="1 - 공학관"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/benefit"
+            tools:text="지능+ 7/click"
+            android:layout_marginHorizontal="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/btn"
+        android:checkMark="@drawable/btn_check_y"
+        android:checked="true"
+        android:src="@drawable/btn_check_y"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:padding="14dp"
+        android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lockLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#AA000000"
+        android:gravity="center">
+        <ImageView
+            android:src="@drawable/ic_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="12dp"
+            android:layout_margin="12dp"/>
+        <TextView
+            android:id="@+id/lockLimit"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:text="지능 1 이상 잠금 해제"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>

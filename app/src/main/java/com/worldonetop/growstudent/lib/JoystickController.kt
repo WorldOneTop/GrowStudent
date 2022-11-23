@@ -11,8 +11,8 @@ class JoystickController(private val density:Float) {
     private val maxLen:Float
 
     init {
-        moveLayoutSize = (density*110).roundToInt()
-        moveInnerSize = (density*40).roundToInt()
+        moveLayoutSize = (density*150).roundToInt()
+        moveInnerSize = (density*55).roundToInt()
         maxLen = moveLayoutSize/2f -moveInnerSize/2f
     }
 

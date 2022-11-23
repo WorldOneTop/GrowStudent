@@ -12,7 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/black</item>
         <!-- Customize your theme here. -->
-        <item name="android:colorButtonNormal" >@color/bg_third_color</item>
+        <item name="android:colorButtonNormal" >@color/bg_button_color</item>
         <item name="android:fontFamily">@font/hbios_sys</item>
 
         <item name="android:textColor">@color/black</item>

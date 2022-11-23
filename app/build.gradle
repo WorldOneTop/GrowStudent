@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.worldonetop.growstudent"
-        minSdk 26
+        minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -36,11 +36,15 @@ android {
     viewBinding {
         enabled = true
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
+    implementation 'com.google.android.gms:play-services-basement:18.0.1'
     def viewModelVersion = "2.5.1"
-    def hiltVersion = "2.38.1"
+    def hiltVersion = "2.42"
     def coroutine = "2.5.1"
     def retrofitVersion = "2.9.0"
 
@@ -67,6 +71,10 @@ dependencies {
 
 
 
+
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.google.code.gson:gson:$retrofitVersion"
+
 }

@@ -10,10 +10,12 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primary_color">#FF0066BC</color>
+    <color name="primary_light_color">#CEDEF5</color>
     <color name="secondary_color">#FF00B6AD</color>
 
     <color name="bg_primary_color">#F0F4FA</color>
     <color name="bg_secondary_color">#DAE3F3</color>
     <color name="bg_third_color">#E4E6EA</color>
+    <color name="bg_button_color">#B0BEC5</color>
 
 </resources>

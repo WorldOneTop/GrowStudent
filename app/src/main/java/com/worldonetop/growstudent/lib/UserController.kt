@@ -1,4 +1,4 @@
 package com.worldonetop.growstudent.lib
 
-class Map {
+object UserController {
 }

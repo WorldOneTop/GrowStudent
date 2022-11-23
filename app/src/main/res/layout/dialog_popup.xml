@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bg_round"
+    android:gravity="center"
+    android:padding="14dp">
+
+    <ImageView
+        android:id="@+id/dialogPopupClose"
+        android:src="@drawable/btn_close"
+        android:layout_gravity="end"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+    <ImageView
+        android:id="@+id/dialogPopupImage"
+        tools:src="@drawable/gadget_int3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
+    <TextView
+        android:id="@+id/dialogPopupTitle"
+        tools:text="노트북"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/dialogPopupContent"
+        tools:text="정말 종료하시겠습니까"
+        android:lineSpacingExtra="7dp"
+        android:textSize="20sp"
+        android:layout_margin="14dp"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:background="@drawable/bg_round"
+        android:backgroundTint="@color/bg_primary_color"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialogPopupBtnLeft"
+            tools:text="YES"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialogPopupBtnRight"
+            tools:text="YES"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>

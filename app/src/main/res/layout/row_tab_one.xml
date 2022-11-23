@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="14dp">
+
+    <ImageView
+        android:id="@+id/img"
+        tools:src="@drawable/ic_exercise"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:layout_marginStart="14dp">
+
+        <TextView
+            android:id="@+id/title"
+            tools:text="1 - 공학관"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:id="@+id/content"
+            tools:text="뭐 공부ㅏ는곳 \n지능올림\n지능올림"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_weight="2"
+            android:lineSpacingExtra="4dp"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+</LinearLayout>

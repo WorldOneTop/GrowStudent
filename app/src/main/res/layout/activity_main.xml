@@ -1,114 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".view.MainActivity">
+<layout>
 
-    <LinearLayout
+    <data>
+        <variable
+            name="vm"
+            type="com.worldonetop.growstudent.vm.MainViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fitsSystemWindows="true"
+        tools:context=".view.MainActivity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/tb_background_color"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/profileImg"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="14dp"
-                android:adjustViewBounds="true"
-                tools:src="@drawable/ic_launcher_foreground" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_money" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:text="12345" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="14dp"
-                android:layout_weight="1"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:text="비고란" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="14dp"
-                android:textAlignment="textEnd"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:text="22.03.03" />
-
-        </LinearLayout>
 
         <FrameLayout
+            android:id="@+id/viewRootLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <com.worldonetop.growstudent.view.custom.MapView
                 android:id="@+id/mapView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/userView"
+                android:layout_width="73dp"
+                android:layout_height="103dp"
+                android:background="@drawable/user_main" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/mainFrg"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id"
+                    tools:text="asdfghjklqewrtyu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="체력 "
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{vm.hpStr}"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{vm.hpMaxStr}"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="학업 "
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{vm.intStr}"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_margin="14dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_money" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{vm.moneyStr}"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+            <FrameLayout
+                android:id="@+id/moveLayout"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="24dp"
+                android:alpha="0.9"
+                android:background="@drawable/move_view_outline"
+                app:layout_dodgeInsetEdges="bottom">
+
+                <View
+                    android:id="@+id/moveInner"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/move_view_inner" />
+            </FrameLayout>
             <ImageView
-                android:id="@+id/userView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="100dp"
-                android:background="@drawable/user_main"
+                android:id="@+id/upArrow"
+                android:src="@drawable/ic_up_arrow"
+                android:alpha="0.4"
+                android:layout_width="38dp"
+                android:layout_height="72dp"
+                android:adjustViewBounds="true"
                 android:layout_gravity="center|bottom"/>
 
         </FrameLayout>
 
-    </LinearLayout>
 
 
-    <FrameLayout
-        android:id="@+id/moveLayout"
-        android:background="@drawable/move_view_outline"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        app:layout_dodgeInsetEdges="bottom"
-        android:layout_gravity="bottom|start"
-        android:layout_margin="24dp"
-        android:alpha="0.9">
-        <View
-            android:id="@+id/moveInner"
-            android:background="@drawable/move_view_inner"
-            android:layout_gravity="center"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
-    </FrameLayout>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottomFrg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:behavior_hideable="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_insetEdge="bottom"
+            tools:layout="@layout/fragment_map_btm" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottomFrg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_insetEdge="bottom"
-        app:behavior_hideable="false"
-        app:behavior_peekHeight="100dp"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        tools:layout="@layout/fragment_map_btm"/>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

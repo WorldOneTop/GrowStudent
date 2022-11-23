@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="480dp"
-    tools:context=".view.bottom.MapBtmFragment"
+    android:layout_height="match_parent"
+    android:layout_marginTop="170dp"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@drawable/bg_round_btm"
+    android:backgroundTint="@color/white"
+    tools:context=".view.bottom.MapBtmFragment">
 
     <View
         android:layout_width="180dp"
         android:layout_height="2dp"
-        android:background="#848484"
         android:layout_gravity="center"
-        android:layout_marginVertical="8dp"/>
+        android:layout_marginVertical="8dp"
+        android:background="#848484" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/bottomRv"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapBtmPage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_tab_one"
+        android:paddingHorizontal="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_weight="1" />
 
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/tab_map" />
+
+        <ImageView
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/tab_spec" />
+
+        <ImageView
+            android:id="@+id/tab3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/tab_bagpack" />
+
+        <ImageView
+            android:id="@+id/tab4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/tab_settings" />
+    </LinearLayout>
 </LinearLayout>

@@ -16,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class MySizeModule {
+object MySizeModule {
 
     @Singleton
     @Provides
@@ -26,10 +26,12 @@ class MySizeModule {
         MySize.height = getScreenHeight(context)
         MySize.density = density
         MySize.appBarHeight = 50*density
-        MySize.bottomBarHeight = 100*density
-        MySize.mapWith = 970*density * 2
-        MySize.mapHeight = 764*density * 2
+        MySize.mapWith = 1606*density * 2
+        MySize.mapHeight = 1133*density * 2
+        MySize.userWith = 73*density
+        MySize.userHeight = 103*density
         MySize.statusBarHeight = getStatusBarHeight(context)
+        MySize.mapViewHeight = MySize.height - MySize.statusBarHeight*1f
         return MySize
     }
     private fun getStatusBarHeight(context: Context): Int {
