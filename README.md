@@ -2,7 +2,7 @@
 > 한림대를 배경으로 돌아다니며 캐릭터를 키우는 게임   
 > 관련 링크 : <a href="https://github.com/WorldOneTop/GrowStudentServer">서버</a>    
 
-<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white"> <img src="https://img.shields.io/badge/kotlin-7F52FF?style=for-the-badge&logo=Gradle&logoColor=white">
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white"> <img src="https://img.shields.io/badge/kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white">
    
 <img src="https://user-images.githubusercontent.com/45085513/233842526-1df99b62-fcb4-48ff-a187-5eb7b1e83008.jpg" width="40%">
 
